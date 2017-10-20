@@ -1,8 +1,8 @@
 version: 0.0
 os: linux
 files:
-  - source: codedeploy/httpd.conf
-    destination: /etc/httpd/conf
+  - source: codedeploy/nginx.conf
+    destination: /etc/nginx
 hooks:
   BeforeInstall: 
     - location: codedeploy/stopApache.sh

@@ -1,5 +1,5 @@
 #!/bin/bash
-aws deploy --profile sandbox create-deployment \
+aws deploy create-deployment \
 --application-name CI_api_gseanalytics \
 --deployment-config-name CodeDeployDefault.OneAtATime \
 --deployment-group-name CI_api_gseanalytics_Deployment_Group \
