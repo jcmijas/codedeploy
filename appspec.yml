@@ -1,0 +1,14 @@
+version: 0.0
+os: linux
+files:
+  - source: codedeploy/httpd.conf
+    destination: /etc/httpd/conf
+hooks:
+  BeforeInstall: 
+    - location: codedeploy/stopApache.sh
+      runas: root
+  AfterInstall:
+    - location: codedeploy/updateConfig.sh
+      runas: root
+    - location: codedeploy/startApache.sh
+      runas: root
